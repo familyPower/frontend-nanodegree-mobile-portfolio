@@ -1,4 +1,33 @@
-## Website Performance Optimization portfolio project
+Ansel's Comments:
+
+1. Optimize CRP for index.html
+I followed the suggestions offered in the advanced video offering suggestions for
+optimizing for PageSpeed. The suggestion that satisfied the requirement was to
+include the css in the html file. I have a PageSpeed of 99/100 for both mobile
+and desktop.
+
+2. Optimize Frame Rate scrolling in pizza.html
+Again, I followed the suggestions offered in the advanced video. Some of the
+suggestions I thought of before watching the video, kudos to me. I tried a few
+optimizations, some worked and some didn't. I tried css' transform: translateX;
+but it didn't work and I realized that it wouldn't have much impact on performance.
+I wonder why it's there???
+
+One comment. I used the Frame Rate HUD display to measure the frame rate. It
+gave really low results. I saw fps' from 8fps to about 20fps; but when I ran the
+code through devtools' timing utility, the fps was very high. I'm not sure what's
+going on. I tried using the fps in Firefox, but the code doesn't appear to work -
+the pizza's don'g move when scrolling.
+
+
+3. Optimize Computational Efficiency for resizing pizza in pizza.html
+Here, I used the suggestions given in the video for stopping FSL. I thought the
+resizing of the pizza was really complicated, the video helped me realize that
+my suspicion was correct.
+
+================================================================================
+
+ Website Performance Optimization portfolio project
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
 
@@ -32,7 +61,7 @@ Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
 
 ####Part 2: Optimize Frames per Second in pizza.html
 
-To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js. 
+To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js.
 
 You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
 

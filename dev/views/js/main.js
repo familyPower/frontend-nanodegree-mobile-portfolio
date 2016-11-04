@@ -478,7 +478,7 @@ var resizePizzas = function(size) {
     }
     var items = getElementsByClassName("randomPizzaContainer");
 
-    for (var i= = 0; i < items.length; i++) {
+    for (var i = 0; i < items.length; i++) {
       items[i].style.width = newWidth;
     }
     // User Timing API is awesome

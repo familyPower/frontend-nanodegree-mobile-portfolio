@@ -119,7 +119,7 @@ module.exports = function(grunt) {
       // src: ['*.css', '!*.min.css', ],
         files: {
           'dist/css/print.min.css': ['dev/css/print.css'],
-          'dist/css/style.min.css': ['dev/css/stle.css'],
+          'dist/css/style.min.css': ['dev/css/style.css'],
           'dist/views/css/bootstrap-grid.min.css': ['dev/views/css/bootstrap-grid.css'],
           'dist/views/css/style.min.css': ['dev/views/css/style.css']
         }
