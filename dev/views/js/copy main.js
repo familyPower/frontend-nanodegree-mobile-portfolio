@@ -449,19 +449,8 @@ var resizePizzas = function(size) {
     return dx;
   }
 
-  // Iterates through pizza elements on the page and changes their widths
-  // function changePizzaSizes(size) {
-  //   for (var i = 0; i < document.querySelectorAll(".randomPizzaContainer").length; i++) {
-  //     var dx = determineDx(document.querySelectorAll(".randomPizzaContainer")[i], size);
-  //     var newwidth = (document.querySelectorAll(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
-  //     document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
-  //   }
-  // }
-
-  // changePizzaSizes(size);
-  //
-  // Iterates through pizza elements on the page and changes their widths
-  // solution found in "Stop FSL" quiz.
+  Iterates through pizza elements on the page and changes their widths
+  solution found in "Stop FSL" quiz.
   function changePizzaSizes(size) {
     switch (size) {
       case "1":
@@ -481,15 +470,33 @@ var resizePizzas = function(size) {
     for (var i= = 0; i < items.length; i++) {
       items[i].style.width = newWidth;
     }
-    // User Timing API is awesome
-    window.performance.mark("mark_end_resize");
-    window.performance.measure("measure_pizza_resize", "mark_start_resize", "mark_end_resize");
-    var timeToResize = window.performance.getEntriesByName("measure_pizza_resize");
-    console.log("Time to resize pizzas: " + timeToResize[timeToResize.length-1].duration + "ms");
 
-  }
-
-};
+  };
+//   function changePizzaSizes(size) {
+//     var items = getElementsByClassName("randomPizzaContainer");
+//     var dx;
+//     var newwidth;
+//
+//     for (var i= = 0; i < items.length; i++) {
+//       dx = determineDx(items[i], size);
+//       newwidth = items[i].offsetWidth + dx) + 'px';
+//       items[i].style.width = newwidth;
+//     }
+//     // for (var i = 0; i < document.querySelectorAll(".randomPizzaContainer").length; i++) {
+//     //   var dx = determineDx(document.querySelectorAll(".randomPizzaContainer")[i], size);
+//     //   var newwidth = (document.querySelectorAll(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
+//     //   document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
+//     // }
+//   }
+//
+//   changePizzaSizes(size);
+//
+//   // User Timing API is awesome
+//   window.performance.mark("mark_end_resize");
+//   window.performance.measure("measure_pizza_resize", "mark_start_resize", "mark_end_resize");
+//   var timeToResize = window.performance.getEntriesByName("measure_pizza_resize");
+//   console.log("Time to resize pizzas: " + timeToResize[timeToResize.length-1].duration + "ms");
+// };
 
 window.performance.mark("mark_start_generating"); // collect timing data
 
