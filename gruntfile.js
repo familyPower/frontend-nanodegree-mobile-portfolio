@@ -104,10 +104,10 @@ module.exports = function(grunt) {
           },
           files: {                                   // Dictionary of files
             'dist/index.html': 'dev/index.html',     // 'destination': 'source'
-            'dist/project-2048.min.html': 'dev/project-2048.html',
-            'dist/project-mobile.min.html': 'dev/project-mobile.html',
-            'dist/project-webperf.min.html': 'dev/project-webperf.html',
-            'dist/views/pizza.min.html': 'dev/views/pizza.html'
+            'dist/project-2048.html': 'dev/project-2048.html',
+            'dist/project-mobile.html': 'dev/project-mobile.html',
+            'dist/project-webperf.html': 'dev/project-webperf.html',
+            'dist/views/pizza.html': 'dev/views/pizza.html'
           }
         }
       },

@@ -18,7 +18,7 @@ cameron *at* udacity *dot* com
 
 // As you may have realized, this website randomly generates pizzas.
 // Here are arrays of all possible pizza ingredients.
-var COUNT_PIZZAS = 10;
+var COUNT_PIZZAS = 53;
 
 var pizzaIngredients = {};
 pizzaIngredients.meats = [
@@ -508,16 +508,42 @@ function updatePositions() {
   var items = document.getElementsByClassName('mover');
   var phaseValue = (document.body.scrollTop / 1250);
   var phase;
-
+  var moveX;
+  var aryMoveX = [];
   // moved variables not directly related to 'i' outside of loop.
+  console.log("items.length: ", items.length);
   for (var i = 0; i < items.length; i++) {
     phase = Math.sin(phaseValue + (i % 5));
 //    console.log("i%5", i,   i % 5);
 
-    // transform: translateX?
-    items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+    moveX = items[i].basicLeft + 100 * phase + 'px'
+
+  // transform: translateX
+    // //console.log(moveX);
+    // // Code for Chrome, Safari, Opera
+    // items[i].style.WebkitTransform = "translateX(moveX)";
+    // // Code for IE9
+    // items[i].style.msTransform = "translateX(moveX)";
+    // // Standard syntax
+    // items[i].style.transform = "translateX(moveX)";
+    // backface-visibility: hidden;
+    items[i].style.left = moveX;
+//    aryMoveX.push(moveX);
   }
 
+  // batch update the pizzas
+  for (var x=0; x < items.length; x++) {
+    console.log( aryMoveX[x]);
+  }
+  var posElem = document.getElementById('animation');
+var newStyle = 'background: ' + newBack + ';' +
+  'color: ' + newColor + ';' +
+  'border: ' + newBorder + ';';
+if( typeof( posElem.style.cssText ) != 'undefined' ) {
+  posElem.style.cssText = newStyle; // Use += to preserve existing styles
+} else {
+  posElem.setAttribute('style',newStyle);
+}
   // User Timing API to the rescue again. Seriously, it's worth learning.
   // Super easy to create custom metrics.
   window.performance.mark("mark_end_frame");
